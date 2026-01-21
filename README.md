@@ -12,7 +12,7 @@ echo coucou_yopta | oscopy
 ```
 
 > [!IMPORTANT]
-> This works even if you're connected to a remote SSH server. The content will travel through SSH and arrive in your local system clipboard.
+> This **works** even if you're connected to a remote SSH server. The content will travel through SSH and arrive in your local system clipboard.
 
 Attention though, the `echo` adds a trailing newline. You can strip it with `oscopy -s`:
 
