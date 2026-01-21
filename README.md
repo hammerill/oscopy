@@ -24,7 +24,7 @@ echo precision | oscopy -s
 Why not piping file contents?
 
 ```bash
-cat ~/.ssh/id_rsa.pub | oscopy -s
+cat ~/.ssh/id_rsa.pub | oscopy
 # then paste your SSH pubkey on the website...
 ```
 
