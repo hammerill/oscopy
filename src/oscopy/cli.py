@@ -24,7 +24,7 @@ def main(argv: list[str] | None = None) -> int:
         help="if provided, copy this text instead of reading stdin",
     )
     p.add_argument(
-        "-s", "--strip-trailing-newline",
+        "-x", "-s", "--strip-trailing-newline",
         action="store_true",
         help="strip the trailing newline (useful with echo)",
     )
