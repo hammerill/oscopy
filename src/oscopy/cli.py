@@ -280,6 +280,13 @@ def _cmd_stop() -> int:
     return 0
 
 
+def _cmd_aliases() -> int:
+    print("alias orun='oscopy run --'")
+    print("alias orec='oscopy record'")
+    print("alias ostop='oscopy stop'")
+    return 0
+
+
 def _build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         prog="oscopy",
@@ -322,6 +329,11 @@ def _build_parser() -> argparse.ArgumentParser:
         help="stop recording and copy transcript",
         description="Stop an active recording session and copy its transcript.",
     )
+    subparsers.add_parser(
+        "aliases",
+        help="print shell aliases",
+        description="Print convenience aliases for oscopy.",
+    )
 
     return parser
 
@@ -329,7 +341,7 @@ def _build_parser() -> argparse.ArgumentParser:
 def main(argv: list[str] | None = None) -> int:
     raw_argv = list(sys.argv[1:] if argv is None else argv)
 
-    known_modes = {"copy", "run", "record", "start", "stop", "-h", "--help"}
+    known_modes = {"copy", "run", "record", "start", "stop", "aliases", "-h", "--help"}
     if not raw_argv:
         raw_argv = ["copy"]
     elif raw_argv[0] not in known_modes:
@@ -346,6 +358,8 @@ def main(argv: list[str] | None = None) -> int:
         return _cmd_record()
     if args.mode == "stop":
         return _cmd_stop()
+    if args.mode == "aliases":
+        return _cmd_aliases()
 
     parser.print_help()
     return 2

@@ -100,6 +100,9 @@ Install as a [uv tool](https://docs.astral.sh/uv) from this GitHub repo:
 
 ```bash
 uv tool install git+https://github.com/hammerill/oscopy
+
+# and, if you have OhMyZsh installed, quickly setup recommended aliases orun, orec and ostop:
+oscopy aliases > ~/.oh-my-zsh/custom/oscopy-aliases.zsh
 ```
 
 Or local dev install:
