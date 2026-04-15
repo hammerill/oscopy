@@ -96,13 +96,19 @@ The transcript uses `$ ` as the command prefix, includes both stdout and stderr,
 
 ## Install
 
-Install as a [uv tool](https://docs.astral.sh/uv) from this GitHub repo:
+Install as a [uv tool](https://docs.astral.sh/uv) from PyPi:
 
 ```bash
-uv tool install git+https://github.com/hammerill/oscopy
+uv tool install oscopy
 
 # and, if you have OhMyZsh installed, quickly setup recommended aliases orun, orec and ostop:
 oscopy aliases > ~/.oh-my-zsh/custom/oscopy-aliases.zsh
+```
+
+Or install directly from this GitHub repo:
+
+```bash
+uv tool install git+https://github.com/hammerill/oscopy
 ```
 
 Or local dev install:
