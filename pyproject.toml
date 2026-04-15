@@ -1,6 +1,6 @@
 [project]
 name = "oscopy"
-version = "0.1.0"
+version = "1.0.0"
 description = "Python script to copy from STD to your clipboard with OSC 52."
 readme = "README.md"
 authors = [
